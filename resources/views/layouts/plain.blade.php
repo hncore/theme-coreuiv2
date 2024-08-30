@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" dir="{{ backpack_theme_config('html_direction') }}">
+<html lang="{{ app()->getLocale() }}" dir="{{ hncore_theme_config('html_direction') }}">
 <head>
-    @include(backpack_view('inc.head'))
+    @include(hncore_view('inc.head'))
 </head>
 <body class="app flex-row align-items-center">
 
@@ -12,14 +12,14 @@
   </div>
 
   <footer class="app-footer sticky-footer">
-    @include(backpack_view('inc.footer'))
+    @include(hncore_view('inc.footer'))
   </footer>
 
   @yield('before_scripts')
   @stack('before_scripts')
 
-  @include(backpack_view('inc.scripts'))
-  @include(backpack_view('inc.theme_scripts'))
+  @include(hncore_view('inc.scripts'))
+  @include(hncore_view('inc.theme_scripts'))
 
   @yield('after_scripts')
   @stack('after_scripts')

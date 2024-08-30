@@ -15,8 +15,8 @@
             var $alerts_from_php = {{ Illuminate\Support\Js::from(\Alert::getMessages()) }};
 
             // get the alerts from the localstorage
-            var $alerts_from_localstorage = JSON.parse(localStorage.getItem('backpack_alerts')) ?
-                JSON.parse(localStorage.getItem('backpack_alerts')) : {};
+            var $alerts_from_localstorage = JSON.parse(localStorage.getItem('hncore_alerts')) ?
+                JSON.parse(localStorage.getItem('hncore_alerts')) : {};
 
             // merge both php alerts and localstorage alerts
             Object.entries($alerts_from_php).forEach(function(type) {
@@ -40,8 +40,8 @@
                 });
             }
 
-            // in the end, remove backpack alerts from localStorage
-            localStorage.removeItem('backpack_alerts');
+            // in the end, remove hncore alerts from localStorage
+            localStorage.removeItem('hncore_alerts');
         }
     };
 </script>

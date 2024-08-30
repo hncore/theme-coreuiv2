@@ -1,1 +1,1 @@
-@include(backpack_view('inc.menu_items'))
+@include(hncore_view('inc.menu_items'))

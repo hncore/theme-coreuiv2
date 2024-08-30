@@ -24,7 +24,7 @@ Write your answer here.
 
 ### Context to replicate the bug - Backpack, Laravel, PHP, DB version
 
-When I run ```php artisan backpack:version``` the output is:
+When I run ```php artisan hncore:version``` the output is:
 
 ```
 Write your answer here.

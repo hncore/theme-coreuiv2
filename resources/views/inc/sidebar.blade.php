@@ -1,16 +1,16 @@
-@if (backpack_auth()->check())
+@if (hncore_auth()->check())
     {{-- Left side column. contains the sidebar --}}
-    <div class="{{ backpack_theme_config('classes.sidebar') }}">
+    <div class="{{ hncore_theme_config('classes.sidebar') }}">
       {{-- sidebar: style can be found in sidebar.less --}}
       <nav class="sidebar-nav overflow-hidden">
         {{-- sidebar menu: : style can be found in sidebar.less --}}
         <ul class="nav">
-          {{-- <li class="nav-title">{{ trans('backpack::base.administration') }}</li> --}}
+          {{-- <li class="nav-title">{{ trans('hncore::base.administration') }}</li> --}}
           {{-- ================================================ --}}
           {{-- ==== Recommended place for admin menu items ==== --}}
           {{-- ================================================ --}}
 
-          @include(backpack_view('inc.sidebar_content'))
+          @include(hncore_view('inc.sidebar_content'))
 
           {{-- ======================================= --}}
           {{-- <li class="divider"></li> --}}

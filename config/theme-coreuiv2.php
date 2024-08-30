@@ -7,10 +7,10 @@ return [
     | Theme Configuration Values
     |--------------------------------------------------------------------------
     |
-    | The file provides extra configs on top of config/backpack/ui.php
+    | The file provides extra configs on top of config/hncore/ui.php
     |
     | Any value set here will override the ones defined in
-    | config/backpack/ui.php when this theme is in use.
+    | config/hncore/ui.php when this theme is in use.
     |
     */
 

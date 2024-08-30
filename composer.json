@@ -5,11 +5,11 @@
     "authors": [
         {
             "name": "Cristian Tabacitu",
-            "email": "hello@backpackforlaravel.com",
-            "homepage": "https://backpackforlaravel.com"
+            "email": "hello@hncoreforlaravel.com",
+            "homepage": "https://hncoreforlaravel.com"
         }
     ],
-    "homepage": "https://github.com/backpack/theme-coreuiv2",
+    "homepage": "https://github.com/hncore/theme-coreuiv2",
     "keywords": [
         "Laravel", "Backpack", "Backpack for Laravel", "Backpack Addon", "ThemeCoreuiv2"
     ],

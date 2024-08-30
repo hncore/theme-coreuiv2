@@ -1,4 +1,4 @@
-@extends(backpack_view('layouts.top_left'))
+@extends(hncore_view('layouts.top_left'))
 
 @php
 	// Merge widgets that were fluently declared with widgets declared without the fluent syntax: 
@@ -14,20 +14,20 @@
 @endphp
 
 @section('before_breadcrumbs_widgets')
-	@include(backpack_view('inc.widgets'), [ 'widgets' => app('widgets')->where('section', 'before_breadcrumbs')->toArray() ])
+	@include(hncore_view('inc.widgets'), [ 'widgets' => app('widgets')->where('section', 'before_breadcrumbs')->toArray() ])
 @endsection
 
 @section('after_breadcrumbs_widgets')
-	@include(backpack_view('inc.widgets'), [ 'widgets' => app('widgets')->where('section', 'after_breadcrumbs')->toArray() ])
+	@include(hncore_view('inc.widgets'), [ 'widgets' => app('widgets')->where('section', 'after_breadcrumbs')->toArray() ])
 @endsection
 
 @section('before_content_widgets')
-	@include(backpack_view('inc.widgets'), [ 'widgets' => app('widgets')->where('section', 'before_content')->toArray() ])
+	@include(hncore_view('inc.widgets'), [ 'widgets' => app('widgets')->where('section', 'before_content')->toArray() ])
 @endsection
 
 @section('content')
 @endsection
 
 @section('after_content_widgets')
-	@include(backpack_view('inc.widgets'), [ 'widgets' => app('widgets')->where('section', 'after_content')->toArray() ])
+	@include(hncore_view('inc.widgets'), [ 'widgets' => app('widgets')->where('section', 'after_content')->toArray() ])
 @endsection

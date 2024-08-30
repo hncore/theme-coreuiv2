@@ -1,9 +1,9 @@
 # Contributing
 
 Contributions are welcome and will be fully credited:
-- code contributions are accepted via Pull Requests to [this Github repo](https://github.com/backpack/theme-coreuiv2);
+- code contributions are accepted via Pull Requests to [this Github repo](https://github.com/hncore/theme-coreuiv2);
 - financial contributions are usually in the form of [donations](), [projects]() or [jobs](); 
-- documentation contributions are accepted via Pull Requests to [this Github repo](https://github.com/backpack/theme-coreuiv2);
+- documentation contributions are accepted via Pull Requests to [this Github repo](https://github.com/hncore/theme-coreuiv2);
 - other contributions are most likely welcome in the way you see fit;
 
 # Things you could do

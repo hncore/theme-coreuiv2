@@ -1,8 +1,8 @@
-@extends(backpack_view('blank'))
+@extends(hncore_view('blank'))
 
 @section('after_styles')
     <style media="screen">
-        .backpack-profile-form .required::after {
+        .hncore-profile-form .required::after {
             content: ' *';
             color: red;
         }
@@ -11,15 +11,15 @@
 
 @php
   $breadcrumbs = [
-      trans('backpack::crud.admin') => url(config('backpack.base.route_prefix'), 'dashboard'),
-      trans('backpack::base.my_account') => false,
+      trans('hncore::crud.admin') => url(config('hncore.base.route_prefix'), 'dashboard'),
+      trans('hncore::base.my_account') => false,
   ];
 @endphp
 
 @section('header')
     <section class="content-header">
         <div class="container-fluid mb-3">
-            <h1>{{ trans('backpack::base.my_account') }}</h1>
+            <h1>{{ trans('hncore::base.my_account') }}</h1>
         </div>
     </section>
 @endsection
@@ -49,21 +49,21 @@
 
         {{-- UPDATE INFO FORM --}}
         <div class="col-lg-8">
-            <form class="form" action="{{ route('backpack.account.info.store') }}" method="post">
+            <form class="form" action="{{ route('hncore.account.info.store') }}" method="post">
 
                 {!! csrf_field() !!}
 
                 <div class="card padding-10">
 
                     <div class="card-header">
-                        {{ trans('backpack::base.update_account_info') }}
+                        {{ trans('hncore::base.update_account_info') }}
                     </div>
 
-                    <div class="card-body backpack-profile-form bold-labels">
+                    <div class="card-body hncore-profile-form bold-labels">
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 @php
-                                    $label = trans('backpack::base.name');
+                                    $label = trans('hncore::base.name');
                                     $field = 'name';
                                 @endphp
                                 <label class="required">{{ $label }}</label>
@@ -72,18 +72,18 @@
 
                             <div class="col-md-6 form-group">
                                 @php
-                                    $label = config('backpack.base.authentication_column_name');
-                                    $field = backpack_authentication_column();
+                                    $label = config('hncore.base.authentication_column_name');
+                                    $field = hncore_authentication_column();
                                 @endphp
                                 <label class="required">{{ $label }}</label>
-                                <input required class="form-control" type="{{ backpack_authentication_column()==backpack_email_column()?'email':'text' }}" name="{{ $field }}" value="{{ old($field) ? old($field) : $user->$field }}">
+                                <input required class="form-control" type="{{ hncore_authentication_column()==hncore_email_column()?'email':'text' }}" name="{{ $field }}" value="{{ old($field) ? old($field) : $user->$field }}">
                             </div>
                         </div>
                     </div>
 
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-success"><i class="la la-save"></i> {{ trans('backpack::base.save') }}</button>
-                        <a href="{{ backpack_url() }}" class="btn">{{ trans('backpack::base.cancel') }}</a>
+                        <button type="submit" class="btn btn-success"><i class="la la-save"></i> {{ trans('hncore::base.save') }}</button>
+                        <a href="{{ hncore_url() }}" class="btn">{{ trans('hncore::base.cancel') }}</a>
                     </div>
                 </div>
 
@@ -92,21 +92,21 @@
 
         {{-- CHANGE PASSWORD FORM --}}
         <div class="col-lg-8">
-            <form class="form" action="{{ route('backpack.account.password') }}" method="post">
+            <form class="form" action="{{ route('hncore.account.password') }}" method="post">
 
                 {!! csrf_field() !!}
 
                 <div class="card padding-10">
 
                     <div class="card-header">
-                        {{ trans('backpack::base.change_password') }}
+                        {{ trans('hncore::base.change_password') }}
                     </div>
 
-                    <div class="card-body backpack-profile-form bold-labels">
+                    <div class="card-body hncore-profile-form bold-labels">
                         <div class="row">
                             <div class="col-md-4 form-group">
                                 @php
-                                    $label = trans('backpack::base.old_password');
+                                    $label = trans('hncore::base.old_password');
                                     $field = 'old_password';
                                 @endphp
                                 <label class="required">{{ $label }}</label>
@@ -115,7 +115,7 @@
 
                             <div class="col-md-4 form-group">
                                 @php
-                                    $label = trans('backpack::base.new_password');
+                                    $label = trans('hncore::base.new_password');
                                     $field = 'new_password';
                                 @endphp
                                 <label class="required">{{ $label }}</label>
@@ -124,7 +124,7 @@
 
                             <div class="col-md-4 form-group">
                                 @php
-                                    $label = trans('backpack::base.confirm_password');
+                                    $label = trans('hncore::base.confirm_password');
                                     $field = 'confirm_password';
                                 @endphp
                                 <label class="required">{{ $label }}</label>
@@ -134,8 +134,8 @@
                     </div>
 
                     <div class="card-footer">
-                            <button type="submit" class="btn btn-success"><i class="la la-save"></i> {{ trans('backpack::base.change_password') }}</button>
-                            <a href="{{ backpack_url() }}" class="btn">{{ trans('backpack::base.cancel') }}</a>
+                            <button type="submit" class="btn btn-success"><i class="la la-save"></i> {{ trans('hncore::base.change_password') }}</button>
+                            <a href="{{ hncore_url() }}" class="btn">{{ trans('hncore::base.cancel') }}</a>
                     </div>
 
                 </div>

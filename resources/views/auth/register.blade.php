@@ -1,16 +1,16 @@
-@extends(backpack_view('layouts.plain'))
+@extends(hncore_view('layouts.plain'))
 
 @section('content')
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-4">
-            <h3 class="text-center mb-4">{{ trans('backpack::base.register') }}</h3>
+            <h3 class="text-center mb-4">{{ trans('hncore::base.register') }}</h3>
             <div class="card">
                 <div class="card-body">
-                    <form class="col-md-12 p-t-10" role="form" method="POST" action="{{ route('backpack.auth.register') }}">
+                    <form class="col-md-12 p-t-10" role="form" method="POST" action="{{ route('hncore.auth.register') }}">
                         {!! csrf_field() !!}
 
                         <div class="form-group">
-                            <label class="control-label" for="name">{{ trans('backpack::base.name') }}</label>
+                            <label class="control-label" for="name">{{ trans('hncore::base.name') }}</label>
 
                             <div>
                                 <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="name" value="{{ old('name') }}">
@@ -24,21 +24,21 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="{{ backpack_authentication_column() }}">{{ trans(config('backpack.base.authentication_column_name')) }}</label>
+                            <label class="control-label" for="{{ hncore_authentication_column() }}">{{ trans(config('hncore.base.authentication_column_name')) }}</label>
 
                             <div>
-                                <input type="{{ backpack_authentication_column()==backpack_email_column()?'email':'text'}}" class="form-control{{ $errors->has(backpack_authentication_column()) ? ' is-invalid' : '' }}" name="{{ backpack_authentication_column() }}" id="{{ backpack_authentication_column() }}" value="{{ old(backpack_authentication_column()) }}">
+                                <input type="{{ hncore_authentication_column()==hncore_email_column()?'email':'text'}}" class="form-control{{ $errors->has(hncore_authentication_column()) ? ' is-invalid' : '' }}" name="{{ hncore_authentication_column() }}" id="{{ hncore_authentication_column() }}" value="{{ old(hncore_authentication_column()) }}">
 
-                                @if ($errors->has(backpack_authentication_column()))
+                                @if ($errors->has(hncore_authentication_column()))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first(backpack_authentication_column()) }}</strong>
+                                        <strong>{{ $errors->first(hncore_authentication_column()) }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="password">{{ trans('backpack::base.password') }}</label>
+                            <label class="control-label" for="password">{{ trans('hncore::base.password') }}</label>
 
                             <div>
                                 <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="password">
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="password_confirmation">{{ trans('backpack::base.confirm_password') }}</label>
+                            <label class="control-label" for="password_confirmation">{{ trans('hncore::base.confirm_password') }}</label>
 
                             <div>
                                 <input type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" name="password_confirmation" id="password_confirmation">
@@ -68,17 +68,17 @@
                         <div class="form-group">
                             <div>
                                 <button type="submit" class="btn btn-block btn-primary">
-                                    {{ trans('backpack::base.register') }}
+                                    {{ trans('hncore::base.register') }}
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            @if (backpack_users_have_email() && backpack_email_column() == 'email' && config('backpack.base.setup_password_recovery_routes', true))
-                <div class="text-center"><a href="{{ route('backpack.auth.password.reset') }}">{{ trans('backpack::base.forgot_your_password') }}</a></div>
+            @if (hncore_users_have_email() && hncore_email_column() == 'email' && config('hncore.base.setup_password_recovery_routes', true))
+                <div class="text-center"><a href="{{ route('hncore.auth.password.reset') }}">{{ trans('hncore::base.forgot_your_password') }}</a></div>
             @endif
-            <div class="text-center"><a href="{{ route('backpack.auth.login') }}">{{ trans('backpack::base.login') }}</a></div>
+            <div class="text-center"><a href="{{ route('hncore.auth.login') }}">{{ trans('hncore::base.login') }}</a></div>
         </div>
     </div>
 @endsection
